@@ -1,0 +1,401 @@
+* {
+    box-sizing: border-box;
+}
+:root{
+    --hoverTextColor: #f30808;
+    --textcolor: rgb(100, 98, 98);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    color:var(--textcolor);
+}
+
+.header {
+    height: 80px;
+    width: 100%;
+    outline: 1px solid gray;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    justify-content: space-between;
+    font-weight: 400px;
+}
+
+.headerleft,
+.headerright {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 110%;
+    height: 110px;
+}
+
+.logo {
+    width: 200px;
+
+}
+
+.searchcontainer {
+    outline: 1px solid black;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-left: 25px;
+    padding: 5px;
+    position: relative;
+}
+
+form {
+    width: 100%;
+}
+
+.inputsearch {
+    font-size: large;
+    width: 300px;
+    border: none;
+    outline: none;
+}
+
+.searchicon img {
+    width: 20px;
+    margin: 5px;
+}
+.iconcross img{
+    height: 15px;
+    width: 17px;
+}
+
+#close {
+    display: none;
+}
+
+.serachrecent {
+    position: absolute;
+    top: 41px;
+    bottom: 0px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    left: 0;
+    height: 400px;
+    width: 100%;
+    display: none;
+    padding: 12px;
+    background-color: white;
+}
+
+.searchcontainer:focus-within .serachrecent {
+    display: block;
+}
+
+.recenticon img {
+    width: 23px;
+    height: 22px;
+    margin-right: 12px;
+}
+
+.Recenticons {
+    display: flex;
+    align-items: center;
+
+}
+/* right */
+
+.mobileicon img{
+    width: 24px;
+    margin: 5px;
+}
+
+.downloadcontainer{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-right: 20px;
+    position: relative;
+}
+.downloadcontainer:hover{
+    color:var(--hoverTextColor);
+    cursor:pointer;
+}
+.downloadhoverbtncontainer h2{
+   font-size: 20px;
+}
+.downloadbtn img{
+    width: 180px;
+    display: block;
+    margin-top: 5px;
+}
+.downloadhoverbtncontainer{
+    position: absolute;
+    bottom: 0;
+    top:47px;
+    width: 200px;
+    height: 200px;
+    display: none;
+    padding: 5px;
+    margin-left:  -30px;
+    color:var(--textcolor);
+    background: white;
+}
+.downloadcontainer:hover  .downloadhoverbtncontainer,
+.downloadcontainer:focus  .downloadhoverbtncontainer{
+display: block;
+}
+.profilecart {
+    display: flex;
+    align-items: center;
+}
+.profilecart:hover,
+.profilecart:focus{
+    color: var(--hoverTextColor);
+}
+.profileicon img{
+    height: 24px;
+}
+.carticon img{
+    height: 24px;
+}
+
+.profilecontainer,
+.cartcontainer{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 30px;
+}
+.profilecart p {
+    margin: 0;
+    padding: 0;
+}
+.becom{
+    padding: 0px 50px;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    font-size: 18px;
+}
+/* navigation */
+nav{
+ border-bottom: 1px solid gray;
+    width: 100%;
+    height: 50px;
+   
+    
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    height: 100%;
+    padding: 0;
+    margin:  0px 30px;
+    position: relative;
+    
+}
+nav ul li{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+  
+    
+}
+nav ul li:hover{
+    border-bottom: 5px solid var(--hoverTextColor);
+    color:var(--hoverTextColor);
+}
+/* module box submenu */
+.submenu{
+    position: absolute;
+    background-color: white;
+    /* height: 400px; */
+    top: 50px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    display: none;
+    padding: 0px 20px;
+    left: 0;
+    right: 0;
+    box-shadow: 1px 1px 3px grey;
+   
+}
+nav ul li:hover .submenu{
+display: block;
+}
+.submenu p{
+    color: var(--textcolor);
+}
+.submenulist{
+    display: flex;
+  
+}
+.column{
+    margin-right: 30px;
+}
+/* lowesprice */
+.lowestpricecntainer{
+    display: flex;
+    margin: 50px auto;
+    max-width: 1024px;
+  
+  
+}
+.lowestpricecntainer h1{
+    font-size: 40px;
+    margin: 0;
+    color: gray;
+}
+.lowestpriceimg{
+    width: 50%;
+
+}
+.lowestpricetext{
+    width: 50%;
+    padding: 25px 0 0 25px;
+}
+.lowestpriceicon img{
+    width: 50px;
+border-radius: 40px;
+
+}
+.lowestp{
+    display: flex;
+    height: 50px;
+    margin: 20px 0;
+}
+.lowestpriceitem{
+    padding:  0 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-right: 2px solid gray;
+}
+.lowestpriceitem p{
+    padding-left: 10px;
+}
+.downloadappcontianer{
+align-items: center;
+font-size: 20px; 
+    display: flex;
+    height: 50px;
+    background-color: red;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: white;
+}
+.downloadappcontianer p{
+    padding: 0px 20px;
+}
+/* categories */
+.topcategories{
+    width: 1100px;
+    margin: auto; 
+}
+.topcategoriesheading{
+    display: flex;
+    align-items: center;
+  
+}
+.horizontalline{
+    padding: 1px;
+    background-color: #f30808;
+    width: 50%;
+}
+.topcategoriesheading h1{
+    width: max-content;
+    width: 1050px;
+    color: black;
+    font-size: 40px;
+}
+.topcatgoriesisimage{
+    width: 100%;
+    height: 500px;
+    background-image: url(https://images.meesho.com/images/marketing/1678691670429_1200.webp);
+    background-repeat: no-repeat;
+    margin: 50px;
+   display: flex;
+   align-items: flex-end;
+}
+.topcatgoriesisimage img{
+    max-width: 300px;
+    margin: 10px;
+    bottom: 0;
+}
+.topcatgoriesisimage img:first-child{
+    max-width: 400px;
+
+}.flex{
+    display: flex;
+}
+.items-center{
+    align-items: center;
+}
+/* essentialcontainer */
+.essentialcontainer{
+    width: 100%;
+    margin-top: 50px;
+    background-color: 400px;
+    background-image: url(https://images.meesho.com/images/marketing/1678691743015_1200.webp);
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 52px;
+    
+}
+.essentialcontainer img{
+    max-width: 180px;
+}
+
+.essentialitem{
+    max-width: 250px;
+display: flex;
+flex-direction: column;
+margin-left: 0px;
+align-items: center;
+
+
+
+}
+.essenbtn{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+/* footer */
+footer{
+    margin-top: 30px;
+    background-color: rgb(235, 229, 229);
+    height: 300px;
+    display: flex;
+   
+}
+.footercontainer{
+    margin: 40px 00px 0px 312px;
+   
+}
+.footercontainer h3{
+    font-size: 30px;
+    color: black;
+}
+.footercontainer ul{
+    list-style: none;
+    padding: 0px;
+    margin-left: 30px;
+    
+   
+}
+.footercontainer ul li a{
+text-decoration: none;
+color: gray;
+line-height: 25px;
+}
